@@ -617,11 +617,6 @@ class ThemingDefaultsTest extends TestCase {
 	}
 
 	public function testGetLogoCustom() {
-		$file = $this->createMock(ISimpleFile::class);
-		$this->imageManager->expects($this->once())
-			->method('getImage')
-			->with('logo')
-			->willReturn($file);
 		$this->config
 			->expects($this->at(0))
 			->method('getAppValue')
